@@ -37,7 +37,8 @@ function actualizarPrecio() {
       // Mostrar el resultado y el botón de WhatsApp
       document.getElementById("resultado").style.display = "block";
   
-      const message = `Hola me gustaria realizar esta orden\nTamaño: ${width}x${height} cm\nVinil: ${vinylTypeText}\nCantidad: ${quantity}\nPrecio total: ${totalPrice} pesos`;
+      const mensaje = `Hola, me gustaría realizar esta orden.\nTamaño: ${alto}x${ancho} pulgadas.\nVinil: ${vinilPrecio === 15 ? "Básico" : "Metálico"}.\nCantidad: ${cantidad} unidades.\nPrecio total con descuento: RD$${descuentoPrecio.toFixed(2)}`;
+
       
       // Actualizar el número de WhatsApp
       const whatsappLink = `https://wa.me/8297633345?text=${encodeURIComponent(mensaje)}`;
