@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calculadora de Precio para Stickers</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <div class="container">
     <h1>Calculadora de Precio para Stickers de Resina</h1>
     <p class="info">A mayor cantidad será aplicado un descuento.</p>
-    
+
     <form id="calculadora">
       <div class="input-group">
         <div class="input-item">
@@ -33,6 +35,32 @@
 
       <label for="cantidad">Cantidad:</label>
       <input type="number" id="cantidad" name="cantidad" min="50" value="50" required />
+      <label for="entrega">¿Cómo deseas recibir tu pedido?</label>
+      <select id="entrega" name="entrega" required>
+        <option value="retiro">Retiro en tienda</option>
+        <option value="envio">Envío a Domicilio</option>
+      </select>
+      
+      <div id="opciones-envio" style="display:none;">
+        <label>Lugar de envío:</label><br />
+        <label><input type="radio" name="envio" value="interior" required /> Interior del país (RD$300)</label><br />
+        <label><input type="radio" name="envio" value="distrito" /> Distrito Nacional (RD$200)</label><br />
+        <label><input type="radio" name="envio" value="zona" /> Zonas fuera del Distrito (RD$300)</label>
+        
+      
+        <div id="formulario-envio">
+          <div id="formulario-interior" style="display:none;">
+            <input type="text" id="nombre" placeholder="Nombre completo" />
+            <input type="text" id="telefono" placeholder="Teléfono" />
+            <input type="text" id="ciudad" placeholder="Ciudad" />
+            <input type="text" id="transporte" placeholder="Transporte preferido" />
+          </div>
+          <div id="formulario-ubicacion" style="display:none;">
+            <input type="text" id="ubicacion" placeholder="Pega aquí el link de tu ubicación" />
+          </div>
+        </div>
+      </div>
+      
     </form>
 
     <div id="resultado" class="resultado">
@@ -48,4 +76,5 @@
 
   <script src="app.js"></script>
 </body>
+
 </html>
