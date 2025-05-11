@@ -134,6 +134,12 @@ input, select, button {
   text-decoration: none;
 }
 
+#formulario-envio input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
 @media (max-width: 768px) {
   .input-group {
     flex-direction: column;
