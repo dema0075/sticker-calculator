@@ -1,0 +1,145 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: #e2e2e2;
+  padding: 30px; /* aumenta el padding general */
+  border-radius: 8px;
+  border: 2px solid black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  font-size: 26px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.info {
+  text-align: center;
+  font-size: 16px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.input-item {
+  width: 48%;
+}
+
+label {
+  font-weight: bold;
+  color: black;
+  margin-top: 10px;
+}
+
+input[type="number"],
+select {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 100%;
+  max-width: 150px;
+  box-sizing: border-box;
+}
+
+
+
+input, select, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.vinil-options {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.vinil-options label {
+  margin-right: 10px;
+}
+
+#resultado {
+  background-color: #d0e9ff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  text-align: center;
+  border: 1px solid #007BFF;
+}
+
+#resultado p {
+  font-size: 18px;
+  color: black;
+  margin: 10px 0;
+}
+
+#precio-unitario,
+#total,
+#descuento {
+  font-weight: bold;
+  font-size: 20px;
+  color: #007BFF; /* Azul para totales y descuento */
+}
+
+#whatsapp-link {
+  background-color: #25D366;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .input-group {
+    flex-direction: column;
+  }
+
+  .input-item {
+    width: 100%;
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculadora de Precio para Stickers</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de Precio para Stickers de Resina</h1>
+    <p class="info">A mayor cantidad será aplicado un descuento.</p>
+    
+    <form id="calculadora">
+      <div class="input-group">
+        <div class="input-item">
+          <label for="alto">Alto (en pulgadas):</label>
+          <input type="number" id="alto" name="alto" required />
+        </div>
+        <div class="input-item">
+          <label for="ancho">Ancho (en pulgadas):</label>
+          <input type="number" id="ancho" name="ancho" required />
+        </div>
+      </div>
+
+      <label for="vinil">Selecciona el tipo de vinil:</label>
+      <div id="vinil" class="vinil-options">
+        <input type="radio" id="vinil-basico" name="vinil" value="15" checked />
+        <label for="vinil-basico">Vinil Básico</label>
+        <input type="radio" id="vinil-metalico" name="vinil" value="17" />
+        <label for="vinil-metalico">Vinil Metálico</label>
+      </div>
+
+      <label for="cantidad">Cantidad:</label>
+      <input type="number" id="cantidad" name="cantidad" min="50" value="50" required />
+    </form>
+
+    <div id="resultado" class="resultado">
+      <p id="precio-unitario">Precio unitario: RD$0.00</p>
+      <p id="total">Total: RD$0.00</p>
+      <p id="descuento">Descuento aplicado: RD$0.00</p>
+    </div>
+
+    <a id="whatsapp-link" href="#" target="_blank" style="display:none;">
+      Enviar a WhatsApp
+    </a>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
